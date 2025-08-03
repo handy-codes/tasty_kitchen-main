@@ -58,17 +58,13 @@ nav {
 .links a.active,
 .links a:hover {
   background: #1b9bff;
-  transition: 0.5s;
+  /* transition: 0.5s; */
 }
 
 .checkbtn {
   display: none;
 }
 
-.menu {
-  width: 20px;
-  height: 20px;
-}
 /* head section ends */
 
 /* main section starts */
@@ -101,7 +97,7 @@ main {
   color: #9bdb56;
 }
 
-.counter h1{
+.counter h1 {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -141,15 +137,19 @@ button {
 .rider-left {
   width: 50%;
   height: 45vh;
+  align-content: center;
 }
 
 .text-one {
   color: #ff0000;
   font-weight: bold;
+  font-size: 50px;
 }
 
 .text-two {
   color: white;
+  font-weight: bold;
+  font-size: 50px;
 }
 
 .rider-right {
@@ -206,18 +206,6 @@ footer {
     left: 0;
   }
 
-  .images {
-    display: grid;
-    grid-template-columns: repeat(minmax(0, 1fr));
-    gap: 20px; /* Tailwind's gap-1 = 4px */
-  }
-
-  .images img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
   .rider {
     display: flex;
     flex-wrap: wrap;
@@ -226,7 +214,23 @@ footer {
   .rider-left {
     width: 100%;
     height: 100%;
+
   }
+
+  .text-one {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.text-two {
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  margin-right: 20px;
+}
+
 
   .rider-right {
     width: 100%;
@@ -238,16 +242,32 @@ footer {
   }
 }
 
-@media (401px <= width <= 767px) {
+@media (max-width: 400px) {
   .images {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .images img {
+    width: 100%;
+    aspect-ratio: 1/1; /* 1/1 is a square. other options 4/3, 16/9 */
+    object-fit: cover;
+  }
+}
+
+@media (401px <= width <= 639px) {
+  .images {
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px; /* Tailwind's gap-1 = 4px */
+    gap: 20px;
   }
 
   .images img {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 1/1; /* 1/1 is a square. other options 4/3, 16/9 */
     object-fit: cover;
   }
 
@@ -257,16 +277,17 @@ footer {
   }
 }
 
-@media (768px <= width <= 1023px) {
+@media (640px <= width <= 1023px) {
   .images {
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px; /* Tailwind's gap-1 = 4px */
+    gap: 20px;
   }
 
   .images img {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 1/1; /* 1/1 is a square. other options 4/3, 16/9 */
     object-fit: cover;
   }
 
@@ -276,7 +297,7 @@ footer {
   }
 }
 
-@media (1024px <= width <= 1279px) {
+@media (min-width: 1024px) {
   .images {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -285,45 +306,7 @@ footer {
 
   .images img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-  }
-
-  .text-one {
-    color: #ff0000;
-    font-weight: bold;
-  }
-}
-
-@media (1280px <= width <= 1535px) {
-  .images {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px; /* Tailwind's gap-1 = 4px */
-  }
-
-  .images img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-  }
-
-  .text-one {
-    color: #ff0000;
-    font-weight: bold;
-  }
-}
-
-@media (min-width: 1536px) {
-  .images {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px; /* Tailwind's gap-1 = 4px */
-  }
-
-  .images img {
-    width: 100%;
-    height: 300px;
+    aspect-ratio: 1/1; /* 1/1 is a square. other options 4/3, 16/9 */
     object-fit: cover;
   }
 
